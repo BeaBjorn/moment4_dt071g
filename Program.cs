@@ -30,7 +30,7 @@ namespace SentimentModel.ConsoleApp
                     break;
                 }
 
-                // Creates an instance of the model input class and stores the user input in a variable named "Col0" 
+                // Creates an instance of the ModelInput class within the SentimentModel namespace and stores the user input in a variable named "Col0" 
                 SentimentModel.ModelInput userInput = new SentimentModel.ModelInput()
                 {
                     Col0 = userReview,
@@ -42,7 +42,7 @@ namespace SentimentModel.ConsoleApp
                 // Console.WriteLine is used to display the review, wether it was positive or negative along woth the score of the review
                 Console.WriteLine($"======================================================\n");
                 Console.WriteLine($"This review is {(prediction.PredictedLabel == 1 ? "positive" : "negative")} with a score of: {prediction.Score[1]:P2}\n");
-                Console.WriteLine($"======================================================\n");
+                Console.WriteLine($"======================================================\n\n");
             }
         }
     }
